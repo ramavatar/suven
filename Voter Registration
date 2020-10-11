@@ -1,0 +1,494 @@
+<html>
+<head>
+<title>Voter Registration</title>
+<style>
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top:0px;
+    left:0px;
+    height:15%;
+    width:100%;
+    z-index: -1;
+    opacity:0.8;
+}
+#navbar .logo-image{ 
+    width:80px;
+    height:60px;
+    border-radius:10%;
+    overflow:hidden;
+    margin:6px;
+} 
+#navbar #th1{
+    font-family: Impact, Charcoal, sans-serif;
+    padding-left:25px;
+    padding-right: 100px;
+    color:#FFF;
+    font-size:25px;
+}
+#navbar #th2{
+    font-family: "Times New Roman", Times, serif;
+    padding-left:450px;
+    padding-right:30px;  
+    color:#FFF;
+    font-size:25px;
+}
+h2{
+ font-family: Sans-serif; 
+ font-size: 24px; 
+ margin-top: 20px;    
+ font-style: normal; 
+ font-weight: bold; 
+ color:rgb(255, 91, 32);
+ text-align: center; 
+}
+#navbar .image{ 
+    width:100px;
+    height:70px;
+    border-radius:10px;
+    overflow:hidden;
+} 
+#x{
+    margin:30px 30px 5px 30px; 
+    border:2px solid gray; 
+    height:40px; 
+}
+#x button{
+    margin-top:4px;
+    margin-left:40px;
+    width:60px;
+    height:30px; 
+    border:2px solid blue;  
+    color:#fff; 
+    background: gray;
+    border-radius:5px; 
+}
+#x button:hover{
+    background:blue;
+    border-radius:5px; 
+}
+#x select{
+    margin:5px 30px 5px 40px;
+    float: right;
+    height:30px;  
+    background: gray;
+    width:120px;
+    padding-left:20px;
+    color:#fff;  
+    border-radius:5px; 
+}
+#y{   
+    margin-top:20px; 
+    padding:10px 0px 5px 29px; 
+    text-align:left; 
+    background:LightGray;
+    border: 2px solid black;
+    border-bottom: 2px gray; 
+}
+#z{  
+    padding:10px 0px 5px 29px; 
+    text-align:left; 
+    background:#f58d42;
+    border: 2px solid black;
+    border-bottom: 2px gray; 
+}
+#a{
+    margin-top:2%; 
+    padding-top:10px;
+    border:2px solid gray; 
+    height:40px; 
+    background: black;
+    color: #fff;
+}
+#table{   
+ font-family: verdana;  
+ font-size:15px;
+ text-align:left;  
+ font-style: normal;
+ font-weight: bold;
+ background:linear-gradient(90deg,#0162c8,#55e7fc);
+ border-collapse: collapse; 
+ border: 2px solid black;
+ width:70%; 
+}
+#table #state{
+    margin:5px;
+    float:30px;
+    height:35px;  
+    width:200px;
+    font-size:20px; 
+    padding-left:20px;  
+    border-radius:5px; 
+    border:2px solid black;
+}
+#gender{
+    margin:10px;
+    float:30px;
+    height:40px;  
+    width:40%;
+    font-size:20px; 
+    margin-left:20px; 
+    padding-left:20px;  
+    border-radius:5px; 
+    border:2px solid black;
+}
+#add{
+    margin:10px;
+    height:40px;  
+    width:40%;
+    font-size:20px; 
+    margin-left:150px; 
+    padding-left:20px;  
+    border-radius:5px; 
+    border:2px solid black;
+}
+input[type=text], input[type=email], input[type=number]{
+ width:45%;
+ height:40px; 
+ padding: 6px 12px;
+ margin:10px 40px;
+ border-radius:10px;
+ border: 2 px solid black; 
+ font-size:17px;
+ text-align: center; 
+}
+input[type=file]{
+    width:80%;
+    height:40px; 
+    padding: 6px 8px;
+    border-radius:10px;
+    border: 2 px solid black; 
+    font-size:15px;
+    margin-left:50px; 
+    background:gray;
+      
+}
+#village{
+ width:65%;   
+ height:36px; 
+ padding: 6px 12px;
+ margin:5%;
+ border-radius:10px;
+ border: 2 px solid black; 
+ font-size:20px;  
+}
+#image{ 
+    margin-left:5%;
+    width:200px;
+    height:38px;
+    border-radius:10px;
+    overflow:hidden;
+}
+#btm{
+    padding: 6px 10px;
+    border: 2px solid white;
+    background-color: SlateBlue;
+    color:black;
+    height:35px;
+    width:100px;
+    font-size:1.2rem;
+    border-radius: 10px;
+    cursor:pointer;
+    margin:15px 3%; 
+}
+#btm:hover{
+     color:white;
+     background-color:MediumSeaGreen;
+}
+#btn{
+    padding:6px 10px;
+    border: 2px solid white;
+    background-color:MediumSeaGreen;
+    color: white;
+    height:35px;
+    width:100px;
+    font-size:1.2rem;
+    border-radius: 10px;
+    cursor:pointer;
+    margin-top:25px; 
+    margin-left:35%; 
+}
+#btn:hover{
+     color: black;
+     background-color:SlateBlue;
+}
+hr{
+    color: black;
+}
+</style>
+</head>
+<body> 
+    <table id="navbar">
+           <th><img class="logo-image" src="flag.png"> </th>
+         <th id="th1">राष्ट्रीय मतदान सेवा<br>डेमो पोर्टल</th>
+         <th id="th2"> NATIONAL VOTERS' SERVICES  <br>    DEMO  PORTAL </th> 
+         <th><img class="image" src="vote.png"> </th>
+     </table>
+<div id="x"> <button>A+</button> <button>A-</button> 
+<select>
+    <center>
+<option>Language</option>
+<option>ENGLISH</option>    
+<option>HINDI</option> </center> </select>
+</div>
+<h2>Note: Fields marked with asterisks ( * ) are mandatory</h2>
+<center>  
+ <div id="table" >   
+<div id="y"><b> Type 6 </br>[See rule 13(1) and 26] </b></div>
+<div id="z"><p> Application for inclusion of name in the electoral roll for the first time due to the transfer of voter or any other constituency from any one constituency</p> </div>
+In service<br>
+Electoral Registration Officer,<br>
+<table>
+    <tr>
+        <td>
+State* : 
+<select id="state" required>
+<option >Select</option>
+<option>Aasam</option>
+<option>Bihar</option>
+<option> Madhya Pradesh</option>
+<option>Uttar Pradesh</option>
+<option>uttarakhand</option>
+</select>
+</td>
+<td>
+ District* : 
+ <select id="state" required>
+<option >Select</option>
+<option>Varanasi</option>
+<option>Lucknow</option>
+<option>Kanpur</option>
+<option>Raebareli</option>
+<option>Chandauli</option>
+</select>
+</td>
+</tr>
+<tr>
+    <td>
+Legislative Assembly / Parlimentary constituency *
+<select id="state" required>
+<option >Select</option>
+<option>Chakia</option>
+<option>Mugalsarai</option>
+<option>Chandauli</option>
+<option>marihaan</option>
+<option>Pindara</option>
+</select>
+</td>
+</tr>
+</table>
+<br>
+I request that my name be included in electoral rolls for all the aforesaid areas.<br>
+<input type="radio">First time voter <br>
+<input type="radio">Due to transfer from other meeting areas.<br><br>
+Below are specifications in support of my claim to be included in the electoral rolls.<br>
+<br>
+<div id="z">
+Mandatory specifications
+</div>
+<table>
+    <tr>
+        <td>First Name*:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" maxlength="50" placeholder="in English"/></td>
+        <td><input type="text" maxlength="50" placeholder="in Regional"/></td>
+    </tr>
+    <tr>
+        <td>Last Name:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" maxlength="50" placeholder="in English"/></td>
+        <td><input type="text"  maxlength="50" placeholder="in Regional"/></td>
+</tr>
+<tr>
+<td>Guardian Name*<input type="text" maxlength="50" placeholder="in English"/></td>
+    <td><input type="text" maxlength="50" placeholder="in Regional"/></td>
+    </tr>
+    <tr>
+        <td>
+ Type of the relationship*:&nbsp&nbsp<select id="gender">
+<option>Father</option>
+<option>Mother</option></select></td>
+</tr>
+<tr>
+<td>Applicant Age*:&nbsp&nbsp<input type="text" maxlength="50" placeholder="Age"/> </td>
+</tr>
+<tr>
+    <td>Applicant Date Of Birth*:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="date" id="gender"/>
+</td>
+</tr>
+</table>
+ <br>
+<div id="z">
+(H) Current address, whose applicant is nominally resident
+</div>
+<br>
+<table>
+    <tr>
+        <td>House No.*:<input type="text" maxlength="50" placeholder="in English"/></td>
+        <td><input type="text" maxlength="50" placeholder="in Regional"/></td>
+    </tr>
+    <tr>
+        <td>street/area*:<input type="text" maxlength="50" placeholder="in English"/></td>
+        <td><input type="text"  maxlength="50" placeholder="in Regional"/></td>
+</tr>
+<tr>
+<td>City/Village:*<input type="text" maxlength="50" placeholder="in English"/></td>
+    <td><input type="text" maxlength="50" placeholder="in Regional"/></td>
+    </tr>
+    <tr>
+<td>Post Office:*<input type="text" maxlength="50" placeholder="in English"/></td>
+    <td><input type="text" maxlength="50" placeholder="in Regional"/></td>
+    </tr>
+<tr>
+<td>Pin Code*&nbsp&nbsp&nbsp&nbsp<input type="text" maxlength="50" placeholder="areaCode"/> </td>
+</tr>
+   <tr>
+        <td>
+ state*:&nbsp&nbsp&nbsp<select id="add" required>
+<option >Select</option>
+<option>Aasam</option>
+<option>Bihar</option>
+<option> Madhya Pradesh</option>
+<option>Uttar Pradesh</option>
+<option>uttarakhand</option>
+</select></td>
+</tr>
+   <tr>
+        <td>
+ District*:<select id="add" required>
+<option >Select</option>
+<option>Varanasi</option>
+<option>Lucknow</option>
+<option>Kanpur</option>
+<option>Raebareli</option>
+<option>Chandauli</option>
+</select></td>
+</tr>
+<tr>
+    <td>Applicant Date Of Birth*: <input type="date" id="gender"/>
+</td>
+</tr>
+</table>
+ <br>
+<div id="z">
+Optional specialties
+</div>
+<br>
+(T) Disability (if any)<br>
+<table>
+    <tr>
+<td><input type="checkbox" />  Visual impairment &nbsp </td>
+<td><input type="checkbox" />  Speech and hearing impairment  &nbsp </td>
+<td><input type="checkbox" />  Motion disabling  &nbsp </td>
+<td><input type="checkbox" />  other<input type="text" placeholder="Mention Disability"/> </td>
+</tr>
+</table>
+e-mail&nbsp &nbsp &nbsp &nbsp</td><input type="email" maxlength="50" placeholder="email"/>  <br>
+Mobile No.<input type="text"  maxlength="50" placeholder="+91 9565365659"/>
+<br>
+<div id="z">
+Upload supporting documents (Supported formats .jpg, .png, .bmp, .jpeg) (max. 2MB)List of supported documents 
+</div>
+<table>
+<tr>
+<td> Your Photo* </td>
+<td><input type="file" id="myFile" name="filename"><br></td>
+</tr>
+<tr>
+<td>Age Proof* </td>
+<td><input type="file" id="myFile" name="filename"></td>
+<td>Document type*<select id="state" required>
+<option >Select</option>
+<option>.pdf</option>
+<option>.jpg</option>
+<option>.png</option>
+<option>.jpeg</option>
+<option>.bmp</option>
+</select></td>
+</tr>
+<tr>
+<td> Address Proof* </td>
+<td><input type="file" id="myFile" name="filename"></td>
+<td>Document type*
+<select id="state" required>
+<option >Select</option>
+<option>.pdf</option>
+<option>.jpg</option>
+<option>.png</option>
+<option>.jpeg</option>
+<option>.bmp</option>
+</select>
+</td>
+</tr>
+</table>
+
+<div id="z">
+Declaration
+</div>
+I declare that according to my best knowledge and belief <br><br>
+i) I am a citizen of India and of my birth;
+<table>
+<tr>
+<td>Village: </td>
+<td><input id="village" type="text" name="City" maxlength="50" /></td>
+</tr>
+    <tr>
+        <td>
+State* : </td>
+<td>
+<select id="state" required>
+<option >Select</option>
+<option>Aasam</option>
+<option>Bihar</option>
+<option> Madhya Pradesh</option>
+<option>Uttar Pradesh</option>
+<option>uttarakhand</option>
+</select>
+</td>
+<td>District* : </td>
+<td><select id="state" required>
+<option >Select</option>
+<option>Varanasi</option>
+<option>Lucknow</option>
+<option>Kanpur</option>
+<option>Raebareli</option>
+<option>Chandauli</option>
+</select>
+</td>
+</tr>
+<tr>
+    <td> Date </td>
+<td>    
+<input type="date" id="state"/>
+</td>
+</tr>
+</table>
+<br>
+ii) I am a nominally resident in the address given in the above (date, month, year) above; <br>
+iii) I have not applied to include my name in the electoral roll for any other constituency;<br>
+iv) <input type="radio" />
+My name has not been already included in the electoral roll for this or any other constituency
+<br><center>or<br>
+<input type="radio" />
+My name would have been included in electoral rolls of the State's constituency, in which I was already residing in the address mentioned below, and if so, then I request that it be removed from that electoral roll. Go.</center>
+<hr>
+<table>
+    <tr>
+   <td>Location*<input id="village" type="text" name="City" maxlength="50" /></td>
+<td><input type="date" id="state"/></td>
+</tr>
+</table>
+I am afraid that the statement or declaration, which is false, to whom I know it or believe that it is false or I do not believe in being true, the People's Representation Act, 1950 (43 of 1950 ) Is punishable under section 31 <br>
+<table>
+    <tr>
+        <td><img id="image" src="nishant.png"></td>
+        <td><input id="village" type="text" name="City" maxlength="50" /></td>
+    </tr>
+</table>
+<input type="button" id="btn" value="Reset"/>
+<input type="button" id="btm" value="Submit"/>
+<br>
+<div id="a">
+    <center>Copyright © 2019 Suven Consultants and Technology Pvt. Ltd.</center>
+    </div>
+</div>
+</center>
+</body>
+</html>
